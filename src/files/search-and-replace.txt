@@ -1,0 +1,14 @@
+function myReplace(str, before, after) {
+  let letters = after.split('');
+  if(before.charCodeAt(0) >= 65 && before.charCodeAt(0) <= 90){
+    letters[0] = letters[0].toUpperCase();
+  } else{
+    letters[0] = letters[0].toLowerCase();
+  }
+  after = letters.join("");
+  return str.replace(before, after);
+}
+
+  myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
+
+  //Output: 'He is Sitting on the couch'

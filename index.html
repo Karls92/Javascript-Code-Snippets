@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Javascript Code Snippets</title>
+
+    <!-- Bootstrap Library - CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Animate CSS Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- main CSS styles -->
+<link rel="stylesheet" href="src/css/style.css">
+
+</head>
+<body class="bg-dark">
+    
+    <div class="container-fluid">
+
+        <!-- header section -->
+        <div class="section px-4 py-5" id="header">
+            <div class="text-secondary text-center">
+                <div class="py-5">
+
+                    <!-- Logo of the webpage -->
+                  <img class="d-block mx-auto mb-4 animate__animated animate__fadeInDown" src="src/img/js_logo.png" alt="Javascript Logo" width="72" height="72">
+                  
+                  <!-- title of the webpage -->
+                  <h1 class="display-5 fw-bold text-white animate__animated animate__fadeInUp">Javascript Code Snippets</h1>
+                  <div class="col-lg-6 mx-auto">
+
+                      <!-- Details of the webpage -->
+                    <p class="fs-5 mb-4 animate__animated animate__fadeInUp">Find different useful code snippets that can be used to integrate into your Javascript project or to practice programming. These ideas were taken from exercises proposed in the <a class="text-warning" href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">FreeCodeCamp Course: Javascript Algorithms and Data Structures</a> and solved by me using my own logic and algorithm.</p> 
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content section -->
+        <div class="section px-4 py-4" id="content">
+            <div class="container col-lg-12 col-xl-10 col-xxl-8">
+                <div class="row g-lg-5 py-5">
+                    <div class="col-lg-5 col-md-12 text-center text-lg-start text-secondary">
+                        <h3 class="fw-bold lh-1 mb-3 text-warning animate__animated animate__fadeInDown">Select a code Snippet. The code  and its output will be displayed on the right side.</h3>
+                        
+                        <!-- select element where all code snippets title will be listed -->
+                        <select class="form-control animate__animated animate__fadeInUp" id="code-selector"></select>
+                        <div class="col-sm-12 mt-4" id="code-details">
+                        	<!-- Description of the code snippet selected -->
+                        </div>
+                    </div>
+                    <div class="mx-auto col-lg-7">
+                        <!-- container where selected code snippet will be display -->
+                        <div class="p-5 bg-light border rounded-3 code-container">
+                            <pre class="h-100" id="display-js-code">
+                                
+                            </pre>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer section-->
+        <div class="section px-4 py-4 footer" id="footer">
+            <div class="container">
+                <p class="text-secondary text-center"><span>This website was Designed & Coded by <a href="#" title="Developer" class="text-warning fw-bold">Carmen Bravo</a></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Library - JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>

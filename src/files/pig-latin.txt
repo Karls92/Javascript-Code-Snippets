@@ -1,0 +1,22 @@
+function translatePigLatin(str) {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  let result = "";
+  if(vowels.includes(str[0])){
+    result = str+"way";
+  }
+  else{
+    let endIndex = 0;
+    for(let index in str){
+      if(vowels.includes(str[index])){
+        endIndex = index;
+        break;
+      }
+    }
+    result = str.substring(endIndex, str.length) + str.substring(0, endIndex) + "ay";
+  }
+  return result;
+}
+  
+  translatePigLatin("cltuonsonant");
+
+  //Output: 'uonsonantcltay'

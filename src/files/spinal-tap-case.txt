@@ -1,0 +1,7 @@
+function spinalCase(str) {
+  return str.split(/\W|[_!@#$%^&*]|(?=[A-Z])/).join("-").toLowerCase();
+}
+
+  console.log(spinalCase('The_Andy_Griffith_Show'));
+
+  //Output: 'the-andy-griffith-show'

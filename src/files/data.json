@@ -1,0 +1,112 @@
+    [
+        {
+            "title": "Arguments Optional",
+            "details": "It consists of a function that can receive one or two parameters and return the sum of both. If the function initially receives a single parameter, it will return a new function that will receive another parameter and will be able to perform the sum of both.",
+            "fileName": "arguments-optional.txt"
+        },
+        {
+            "title": "Binary Agents",
+            "details": "It consists of a function that converts a string of binary code to a string of alphanumeric characters. The function receives a string with binary code as parameter and returns a new string with the set of alphanumeric characters that represent that binary code.",
+            "fileName": "binary-agents.txt"
+        },
+        {
+            "title": "Caesars Cipher",
+            "details": "This code snippet consists of a function that recreates the encryption technique: Caesar Cipher. The function substitutes the current alphabets with alphabet after a number of count. The function receives two parameters (a string and the number of positions in the alphabet to be counted) and it will return the encrypted string.",
+            "fileName": "caesars-cipher.txt"
+        },
+        {
+            "title": "Cash Register",
+            "details": "This code consists of a function that simulates being a cash register. The function receives three parameters (the purchase price, money paid by the customer and the amount of bills and coins that the cash register has). The function calculates the amount of money that should be returned to the customer and checks if the cash register has that money. At the end, the function returns an object with the amount of money returned to the customer distributed in bills and coins, and the status of the cash register.",
+            "fileName": "cash-register.txt"
+        },
+        {
+            "title": "DNA Pairing",
+            "details": "This code consists of a function that receives a string and converts each character into its equivalent DNA pair. The function returns a two-dimensional array with the DNA pairs.",
+            "fileName": "dna-pairing.txt"
+        },
+        {
+            "title": "Drop it",
+            "details": "This code consists of a function that receives an array and a function. The function creates a new method in the array prototype chain and passes the initially received function to it as a parameter. At the end, the function returns a new array that will be the result of having applied the callback function on it.",
+            "fileName": "drop-it.txt"
+        },
+        {
+            "title": "Everything be True",
+            "details": "This code consists of a function that receives an array of objects and a string with the name of a property of the object. The function checks if all the objects inside the array have the property received as a parameter and returns true or false.",
+            "fileName": "everything-be-true.txt"
+        },
+        {
+            "title": "Map the Debris",
+            "details": "This code snippet consists of a function that receives an array of objects containing the name of a satellite and its average altitude, and returns a new array of objects with the name of each satellite and its orbital period.",
+            "fileName": "map-the-debris.txt"
+        },
+        {
+            "title": "Missing Letters",
+            "details": "This code snippet consists of a function that receives a string with the letters of the alphabet and returns a string with the letters that are missing in the string. If the string contains all the letters of the alphabet then the function returns undefined.",
+            "fileName": "missing-letters.txt"
+        },
+        {
+            "title": "Palindrome Checker",
+            "details": "This code snippet consists of a function that receives a string and verifies if it is a palindrome (a word or set of characters that can be read the same forward and backward). The function returns true or false depending on the validation.",
+            "fileName": "palindrome-checker.txt"
+        },
+        {
+            "title": "Pig Latin",
+            "details": "This code consists of a function that receives a string and checks if the string starts with a vowel or a consonant and depending on the result, moves or adds characters to the string. The function returns a new formatted string.",
+            "fileName": "pig-latin.txt"
+        },
+        {
+            "title": "Profile Lookup",
+            "details": "This code consists of a function that receives three parameters (an array of objects, the name of a person, and a property of an object) and checks if the name and property entered match one of the objects in the array. The function can return a string with a message to the user or an array with the value of the searched property.",
+            "fileName": "profile-lookup.txt"
+        },
+        {
+            "title": "Roman Numeral Converter",
+            "details": "This code snippet consists of a function that receives an integer as a parameter and returns a string with its equivalent Roman numeral.",
+            "fileName": "roman-numeral-converter.txt"
+        },
+        {
+            "title": "Search and Replace",
+            "details": "This code consists of a function that receives three strings as parameters (a word or phrase, a search word and a replace word) and returns a new string with the replaced word. If the searched word begins in uppercase, the returned string must also have the first letter of the replaced word in uppercase.",
+            "fileName": "search-and-replace.txt"
+        },
+        {
+            "title": "Smallest Common Multiple",
+            "details": "This code consists of a function that receives an array with two numeric elements (let's call them the numbers A and B) and must find a number (let's call it C) that is the smallest common multiple of the two given numbers (A and B ) and that it is also divisible by all the numbers between A and B.",
+            "fileName": "smallest-common-multiple.txt"
+        },
+        {
+            "title": "Sorted Union",
+            "details": "This code snippet consists of a function that receives a two-dimensional array and searches on each sub-array the elements that are repeated and remove them. The function returns a new one-dimensional array with all the elements of the original sub-array without repetitions.",
+            "fileName": "sorted-union.txt"
+        },
+        {
+            "title": "Spinal Tap Case",
+            "details": "This code snippet consists of a function that receives a string with words separated by spaces or special characters and returns a new string with all words in lowercase and separated with a (-) character.",
+            "fileName": "spinal-tap-case.txt"
+        },
+        {
+            "title": "Steamroller",
+            "details": "This code snippet consists of a function that receives a multidimensional array with different levels of depth, and returns a new one-dimensional array with all the elements in the original sub-arrays.",
+            "fileName": "steamroller.txt"
+        },
+        {
+            "title": "Sum all odd fibonacci numbers",
+            "details": "This code snippet consists of a function that receives a positive integer as a parameter (let's call it NUM) and generates the fibonacci series of NUM and returns the sum of all the odd numbers of the generated series.",
+            "fileName": "sum-all-odd-fibonacci-numbers.txt"
+        },
+        {
+            "title": "Sum all primes",
+            "details": "This code consists of a function that receives a positive integer greater than 1 as a parameter (let's call it NUM) and returns the sum of all the prime numbers from 2 to NUM.",
+            "fileName": "sum-all-primes.txt"
+        },
+        {
+            "title": "Telephone number validator",
+            "details": "This code consists of a function that receives a string with a phone number. The function checks if the string is a US phone number. Returns true or false, depending on the result of the validation.",
+            "fileName": "telephone-number-validator.txt"
+        },
+        {
+            "title": "Wherefore art thou",
+            "details": "This code snippet consists of a function that receives two parameters (an array of objects and an object to be searched for within the array). The function must return the object within the array that matches the object given in the second parameter.",
+            "fileName": "wherefore-art-thou.txt"
+        }
+    ]

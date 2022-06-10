@@ -1,0 +1,21 @@
+function smallestCommons(arr) {
+  arr.sort((a, b) => a-b);
+  const [min, max] = arr;
+  let multiple = max * 2, res = 0, checkMultiple = false;
+  const range = Array.from({length: max - min + 1 }, (val, i) => min + i);
+
+  while(res === 0){
+    checkMultiple = range.every(num => multiple % num === 0);
+    if(checkMultiple) {
+      res = multiple;
+    } else{
+      multiple += max;
+    }
+  }
+  //console.log(res);
+  return res;
+}
+  
+  smallestCommons([23,18]);
+
+  //Output: 6056820

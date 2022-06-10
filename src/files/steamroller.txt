@@ -1,0 +1,25 @@
+function steamrollArray(arr) {
+  let final;
+  function recursiveProcess(list, acc){
+    for(let val of list){
+      if(Array.isArray(val)){
+        if(val.length > 0) {
+          acc.concat(recursiveProcess(val, acc));
+        }
+      } else {
+        acc.push(val);
+      }
+    }
+  return acc;
+  }
+  final = recursiveProcess(arr, []);
+  return final;
+}
+  
+  steamrollArray([1, {}, [3, [[4]]]]);
+
+  //Output: [1, {…}, 3, 4]
+
+
+
+

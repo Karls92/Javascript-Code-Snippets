@@ -1,0 +1,18 @@
+function uniteUnique(...arr) {
+  let start = [];
+  let result = [];
+  for(let i = 0; i < arr.length; i++){
+    result = arr[i].reduce(function(search, current){
+      if(!search.includes(current)){
+        search.push(current);
+      }
+      return search;
+    }, start);
+  }
+  return result;
+}
+  
+  uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+  //Output: [1, 3, 2, 5, 4]
+

@@ -1,0 +1,11 @@
+function palindrome(str) {
+  const str_cleaned = str.match(/[a-zA-Z0-9]/g);
+  const forward = str_cleaned.join("").toLowerCase();
+  const backward = str_cleaned.reverse().join("").toLowerCase();
+  return forward === backward;
+}
+  
+  palindrome("five|\_/|four");
+
+  //Output: false
+

@@ -1,0 +1,64 @@
+function checkCashRegister(price, cash, cid) {
+  let change = Number((cash - price).toFixed(2));
+  const currency_unit = {"PENNY": 0.01, "NICKEL": 0.05, "DIME": 0.1, "QUARTER": 0.25, "ONE": 1, "FIVE": 5, "TEN": 10, "TWENTY": 20, "ONE HUNDRED": 100};
+  const cash_in_drawer = JSON.parse(JSON.stringify(cid));
+  let cash_details = [];
+  let cash_available = 0.00
+  let objResult;
+
+  cid.reverse();
+
+  if(change > 0){
+  
+  let num_coins = 0;
+  let i = 0;
+  cash_details = cid.reduce((chg, cash) => {
+    if(change >= currency_unit[cash[0]]) {
+      num_coins = Math.floor(change / currency_unit[cash[0]]);
+      if(num_coins > 0){
+        if(cash[1] >= (currency_unit[cash[0]] * num_coins)){
+          change = Number((change - (currency_unit[cash[0]] * num_coins)).toFixed(2));
+          cash[1] = cash[1] - (currency_unit[cash[0]] * num_coins);
+          chg.push([cash[0], (currency_unit[cash[0]] * num_coins)]);
+        } else {
+          change = Number((change - cash[1]).toFixed(2));
+          chg.push([cash[0], cash[1]]);
+          cash[1] = 0.00;
+        }
+      }
+    }
+    cash_available += cash[1];
+    return chg;
+  }, []);
+  
+ } else {
+   cash_available = cid.reduce((acc, cash) => acc + cash[1], 0.00);
+ }
+  
+  objResult = change > 0 ? {status: "INSUFFICIENT_FUNDS", change: []} : cash_available > 0 ? {status: "OPEN", change: cash_details} : {status: "CLOSED", change: cash_in_drawer};
+
+  return objResult;
+}
+
+  checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]);
+
+  //Output:
+    /*
+    {
+        change: [
+            ['PENNY', 0.5],
+            ['NICKEL', 0],
+            ['DIME', 0],
+            ['QUARTER', 0],
+            ['ONE', 0],
+            ['FIVE', 0],
+            ['TEN', 0],
+            ['TWENTY', 0],
+            ['ONE HUNDRED', 0]
+        ],
+        status: "CLOSED"
+    }
+    */
+ 
+
+

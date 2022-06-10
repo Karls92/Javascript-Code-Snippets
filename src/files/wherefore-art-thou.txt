@@ -1,0 +1,23 @@
+function whatIsInAName(collection, source) {
+  const KEYS = Object.keys(source);
+  function callback(obj){
+    let match = 0;
+    for(let key of KEYS){
+      if(obj.hasOwnProperty(key)){
+        if(obj[key] === source[key]){
+          match++;
+        }
+      }
+    }
+    if(KEYS.length === match){
+      return obj;
+    }
+  }
+    const arr = collection.filter(ele => callback(ele));
+
+    return arr;
+}
+
+  whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+  //Output: [{first: 'Tybalt', last: 'Capulet'}]

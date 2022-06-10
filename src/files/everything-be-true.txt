@@ -1,0 +1,16 @@
+function truthCheck(collection, pre) {
+  let cont = 1;
+  let prev = !!collection[0][pre];
+  for(let i = 1; i < collection.length; i++) {
+    if(!collection[i].hasOwnProperty(pre)){
+      prev = false;
+    } else{
+      !!collection[i][pre] === prev ? cont++ : prev = !!collection[i][pre]; 
+    }
+  }
+  return cont === collection.length;
+}
+
+  truthCheck([{name: "Quincy", username: "QuincyLarson"}, {name: "Naomi", username: "nhcarrigan"}, {name: "Camperbot"}], "username");
+  
+  //Output: false

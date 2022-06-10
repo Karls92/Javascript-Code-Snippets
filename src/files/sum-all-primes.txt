@@ -1,0 +1,27 @@
+function sumPrimes(num) {
+  let checkPrime = true;
+  let sum = 0;
+  let isPrime = (n, j) => {
+      if(n > j){
+        if(n % j === 0){
+          return false;
+        } else{
+          return isPrime(n, j+1);
+        }
+      } else {
+        return true;
+      }
+  }
+  for(let i = 2; i <= num; i++){
+    checkPrime = isPrime(i, 2);
+    if(checkPrime){
+      sum += i;
+    }
+  }
+  return sum;
+}
+  
+  sumPrimes(10);
+
+  //Output: 17
+

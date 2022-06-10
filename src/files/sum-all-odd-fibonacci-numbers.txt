@@ -1,0 +1,19 @@
+function sumOddsFibNumbers(num) {
+  const fibonacci = n => n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+  let i = 1, sum = 0, resFib = 0;
+  for(;i <= num; i++){
+    resFib = fibonacci(i);
+    if(resFib > num){
+      break;
+    } else{
+      if(resFib % 2 !== 0){
+        sum += resFib;
+      }
+    }
+  }
+  return sum;
+}
+
+  sumOddsFibNumbers(4);
+
+  //Output: 5

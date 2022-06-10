@@ -1,0 +1,8 @@
+function telephoneCheck(str) {
+  const tested = (/^[1]?[-|\s]?(\((\d{3})\)|(\d{3}))[-|\s]?(\d{3})[-|\s]?(\d{4})$/).test(str);
+  return tested;
+}
+  
+  telephoneCheck("11 555-555-5555");
+
+  //Output: false

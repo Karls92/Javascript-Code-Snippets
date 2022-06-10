@@ -1,0 +1,17 @@
+function dropElements(arr, func) {
+  Array.prototype.dropit = function(callback) {
+    let newArr = [];
+    for(let i = 0; i < this.length; i++){
+      if(callback(this[i])){
+        newArr = [...this.slice(i, this.length)];
+        break;
+      }
+    }
+    return newArr;
+  }
+  return arr.dropit(func);
+}
+
+  dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;});
+
+  // Output: [3, 9, 2]

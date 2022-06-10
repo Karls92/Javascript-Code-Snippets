@@ -1,0 +1,19 @@
+function encrypCaesarCipher(str, count) {
+  const str_arr = [...str];
+  const min = 65, max = 91;
+  const alphabet = Array.from({length: max - min}, (v, i) => String.fromCharCode(min+i));
+  let pos = 0;
+
+  const res = str_arr.reduce(function(prev, curr){
+    pos = alphabet.indexOf(curr) - count;
+    pos >= 0 ? pos : pos = alphabet.length + pos;
+    prev += alphabet.includes(curr) ? alphabet[pos] : curr;
+    return prev;
+  }, "");
+
+  return res;
+}
+  
+  encrypCaesarCipher("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.");
+
+  //Output: 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.'

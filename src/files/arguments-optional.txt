@@ -1,0 +1,28 @@
+function addTogether(...arg) {
+  let result;
+  let argLength = arg.length;
+  let validate = num => typeof(num) === "number" && num !== NaN;
+
+  if(argLength === 1){
+    if(validate(arg[0])){
+      result = b => validate(b) ? arg[0] + b : undefined;
+    } else{
+      result = undefined;
+    }
+    
+  } else if(argLength === 2){
+    result = validate(arg[0]) && validate(arg[1]) ? arg[0] + arg[1] : undefined;
+  }
+
+  return result;
+}
+
+  //with two arguments at the same time
+   addTogether(2,3);
+    //Output: 5
+
+  //with one argument first
+    const sum = addTogether(2); //addTogether() return a function
+    sum(3);
+    //Output: 5
+

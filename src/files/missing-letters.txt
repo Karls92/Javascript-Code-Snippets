@@ -1,0 +1,20 @@
+function fearNotLetter(str) {
+  let acc = str[0].charCodeAt();
+  let curr;
+  let unicode;
+  for(let i = 1; i < str.length; i++) {
+    curr = str[i].charCodeAt();
+    if(curr - acc > 1){
+      unicode = curr - 1;
+      break;
+    } else{
+      acc = curr;
+    }
+  }
+  const result = typeof(unicode) == "number" ? String.fromCharCode(unicode) : unicode; 
+  return result;
+}
+  
+  fearNotLetter("abcdefghijklmnopqrstuvwxyz");
+
+  //Output: undefined
